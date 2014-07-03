@@ -1,5 +1,8 @@
 source 'https://rubygems.org'
 
+ruby '2.1.2'
+#ruby-gemset=ticketee
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.6'
 
@@ -39,7 +42,7 @@ group :development, :test do
 end
 
 group :test do
-  gem 'capybara', "2.1.0"
+  gem 'capybara', '~> 2.3.0'
 end
 
 # Use ActiveModel has_secure_password
