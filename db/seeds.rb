@@ -5,3 +5,6 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+  project = Project.create(name: 'example', description: 'example description')
+  ticket = Ticket.create(title: 'test ticket', description: 'test ticket description', project_id: project.id)
