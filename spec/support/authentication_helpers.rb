@@ -1,15 +1,13 @@
-require 'spec_helper'
-
-feature "Signing in" do
-  scenario "Signing in via form" do
-    user = FactoryGirl.create(:user)
-
-    visit '/'
-    click_link 'Sign in'
+module AuthenticationHelpers
+  def sign_in_as!(user)
+    visit '/signin'
     fill_in "Name", with: user.name
     fill_in "Password", with: user.password
     click_button 'Sign in'
-
     expect(page).to have_content("Signed in successfully.")
   end
+end
+
+RSpec.configure do |c|
+  c.include AuthenticationHelpers, type: :feature
 end

@@ -17,7 +17,7 @@ feature "Editing Users" do
     visit user_path(user)
     click_link "Edit Profile"
 
-    fill_in "Username", with: "new_username"
+    fill_in "Name", with: "new_username"
     click_button "Update Profile"
 
     expect(page).to have_content("Profile has been updated.")
