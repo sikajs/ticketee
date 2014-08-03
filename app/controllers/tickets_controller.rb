@@ -8,12 +8,15 @@ class TicketsController < ApplicationController
 
   def new
     @ticket = @project.tickets.build
+    3.times { @ticket.assets.build }
   end
 
   def create
     @ticket = @project.tickets.build(ticket_params)
     @ticket.user = current_user
 
+    # ticket couldn't save correctly, assets will not be saved
+    # solved by moving mount_uploader from ticket to asset model
     if @ticket.save
       flash[:notice] = "Ticket has been created."
       redirect_to [@project, @ticket]
@@ -57,7 +60,8 @@ class TicketsController < ApplicationController
     end
 
     def ticket_params
-      params.require(:ticket).permit(:title, :description, :asset)
+      params.require(:ticket).permit(:title, :description,
+        assets_attributes: [:asset])
     end
 
     def set_ticket
