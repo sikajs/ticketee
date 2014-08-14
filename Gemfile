@@ -1,5 +1,4 @@
-#source 'https://rubygems.org'
-source 'http://ruby.taobao.org/'
+source 'https://rubygems.org'
 
 ruby '2.1.2'
 #ruby-gemset=ticketee
@@ -44,9 +43,7 @@ end
 
 group :development, :test do
   gem 'rspec-rails', "~> 2.14"
-  gem 'better_errors'
   gem 'pry'
-  gem 'binding_of_caller'
 end
 
 group :test do
@@ -54,6 +51,9 @@ group :test do
   gem 'factory_girl_rails', '~> 4.2.1'
   gem 'selenium-webdriver'
   gem 'database_cleaner', '1.0.1'
+end
+
+group :development do
 end
 
 # Use ActiveModel has_secure_password
