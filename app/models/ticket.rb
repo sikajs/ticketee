@@ -2,6 +2,7 @@ class Ticket < ActiveRecord::Base
   #mount_uploader :asset, AssetUploader
 
   belongs_to :project
+  belongs_to :state
   belongs_to :user
   has_many :assets
   has_many :comments

@@ -44,6 +44,7 @@ end
 group :development, :test do
   gem 'rspec-rails', "~> 2.14"
   gem 'pry'
+  gem 'awesome_print'
 end
 
 group :test do

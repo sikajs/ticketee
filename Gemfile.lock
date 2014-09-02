@@ -26,6 +26,7 @@ GEM
       thread_safe (~> 0.1)
       tzinfo (~> 0.3.37)
     arel (4.0.2)
+    awesome_print (1.2.0)
     bcrypt (3.1.7)
     builder (3.1.4)
     cancan (1.6.10)
@@ -162,6 +163,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  awesome_print
   bcrypt (~> 3.1.7)
   cancan (~> 1.6.10)
   capybara (~> 2.3.0)
