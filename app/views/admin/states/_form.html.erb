@@ -1,0 +1,10 @@
+<div id="state_form">
+  <%= form_for [:admin, @state] do |f| %>
+    <p>
+      <%= f.label :name %>
+      <%= f.text_field :name %>
+    </p>
+
+    <%= f.submit %>
+  <% end %>
+</div>
