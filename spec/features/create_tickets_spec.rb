@@ -42,9 +42,9 @@ feature "Create Tickets" do
     expect(page).to have_content("Description is too short")
   end
 
-  #scenario "Creating a ticket with an attachment", js: true do
-  scenario "Creating a ticket with an attachment" do
-    skip("current selenium-webdriver (2.42.0) gem is not compatible with FF v.32 yet")
+  scenario "Creating a ticket with an attachment", js: true do
+  #scenario "Creating a ticket with an attachment" do
+    #skip("current selenium-webdriver (2.42.0) gem is not compatible with FF v.32 yet")
     fill_in "Title", with: "Add documentation for blink tag"
     fill_in "Description", with: "The blink tag has a speed attribute"
 
