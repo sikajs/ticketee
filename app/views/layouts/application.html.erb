@@ -21,6 +21,7 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+<div class="container">
   <% if current_user %>
     Signed in as <%= current_user.email %>
     <%= link_to "Sign out", signout_path, method: :delete %>
@@ -34,12 +35,13 @@
       <%= link_to "Sign in", signin_path %>
     </nav>
   <% end %>
-<% flash.each do |key, value| %>
-  <div class='flash' id='<%= key %>'>
-    <%= value %>
-  </div>
-<% end %>
-<%= yield %>
+  <% flash.each do |key, value| %>
+    <div class='flash' id='<%= key %>'>
+      <%= value %>
+    </div>
+  <% end %>
+  <%= yield %>
+</div>
 
 </body>
 </html>

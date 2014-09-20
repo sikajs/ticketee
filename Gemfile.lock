@@ -28,6 +28,8 @@ GEM
     arel (4.0.2)
     awesome_print (1.2.0)
     bcrypt (3.1.7)
+    bootstrap-sass (3.2.0.2)
+      sass (~> 3.2)
     builder (3.1.4)
     cancan (1.6.10)
     capybara (2.3.0)
@@ -160,6 +162,7 @@ PLATFORMS
 DEPENDENCIES
   awesome_print
   bcrypt (~> 3.1.7)
+  bootstrap-sass (~> 3.2.0)
   cancan (~> 1.6.10)
   capybara (~> 2.3.0)
   carrierwave
